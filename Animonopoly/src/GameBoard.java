@@ -3,15 +3,11 @@ import javax.swing.JPanel;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JLabel;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 
-public class GameBoard extends JFrame implements ActionListener {
+public class GameBoard extends JFrame{
 
     ArrayList<JPanel> BoardSquares = new ArrayList<>();
-    JButton button = new JButton();
 
     GameBoard(){
         this.setSize(1100,790);
@@ -26,9 +22,6 @@ public class GameBoard extends JFrame implements ActionListener {
         SetBoard();
         this.setVisible(true);
 
-        button.addActionListener(this);
-        button.setBackground(Color.WHITE);
-        this.add(button);
     }
 
     public void SetBoard(){
@@ -63,14 +56,5 @@ public class GameBoard extends JFrame implements ActionListener {
         }
     }
 
-    public void setDice(){
 
-        @Override
-        public void actionPerformed(ActionEvent e){
-            if(e.getSource()==button){
-                System.out.println("hello there");
-            }
-        }
-
-    }
 }

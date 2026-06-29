@@ -3,6 +3,9 @@ import javax.swing.JFrame;
 public class Main {
 
     public static void main(String[] args) {
-        JFrame frame = new GameBoard();
+        GameBoard frame = new GameBoard();
+        Dice dice = new Dice(frame);
     }
+
+
 }
